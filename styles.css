@@ -1,0 +1,244 @@
+@font-face {
+	font-family: 'PixeloidSans';
+	src: url('Extras/PixeloidSans-mLxMm.ttf') format('truetype');
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: 'PixeloidSans', Arial, sans-serif;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+}
+
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('Images/background.png') no-repeat center center fixed;
+	background-size: cover;
+	z-index: -1;
+}
+
+#kofi-button-container > iframe {
+	width: auto !important;
+	height: auto !important;
+}
+
+.scroll-container {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.container {
+	background-color: rgb(27, 27, 27);
+	border-radius: 20px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	max-width: 900px;
+	width: 100%;
+	padding: 30px;
+	text-align: center;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 1;
+	margin-top: 20px;
+}
+
+header {
+	margin-bottom: 20px;
+}
+
+h1 {
+	color: #007bff;
+	margin: 0;
+	font-size: 2.5em;
+}
+
+.info-text {
+	font-size: 0.9em;
+	color: #ffffff;
+}
+
+.upload-section, .controls, .download-section {
+	margin-bottom: 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.controls {
+	display: none;
+}
+
+.controls label {
+	color: white;
+	font-size: 1.4em;
+}
+
+.custom-file-upload {
+	border: 1px solid #007bff;
+	display: inline-block;
+	padding: 10px 20px;
+	cursor: pointer;
+	background-color: #007bff;
+	color: white;
+	border-radius: 5px;
+	font-size: 16px;
+	margin-top: 10px;
+	width: auto;
+	margin-bottom: 10px;
+}
+
+.custom-file-upload:hover {
+	background-color: #0056b3;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+.pixel-size-control {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.arrow-button {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	margin: 0 10px;
+}
+
+.arrow-button:hover {
+	background-color: #0056b3;
+}
+
+#pixelSizeDisplay {
+	font-size: 20px;
+	width: 40px;
+	text-align: center;
+	color: white; 
+}
+
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 10px;
+	font-family: 'PixeloidSans', Arial, sans-serif;
+}
+
+canvas {
+	border: 2px solid white;
+	border-radius: 10px;
+	display: none;
+	margin: 20px 0;
+	padding: 10px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.download-heading {
+	color: white; 
+	font-size: 1.5em;
+	margin-bottom: 10px;
+	display: none;
+}
+
+.donations-text {
+	color: white; 
+	font-size: 0.7em;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	display: none;
+}
+
+.download-button {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.download-button:hover {
+	background-color: #0056b3;
+}
+
+.download-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+	width: 100%;
+}
+
+.original-size-button {
+	width: calc(100% - 20px);
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+
+
+@media (max-width: 768px) {
+	html, body {
+		font-size: 16px;
+	}
+
+	.container {
+		padding: 20px;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	.custom-file-upload {
+		font-size: 14px;
+		padding: 8px 16px;
+	}
+
+	.download-buttons {
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.download-button {
+		width: 100%;
+		font-size: 14px;
+	}
+
+	canvas {
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+	}
+}

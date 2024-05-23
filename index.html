@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PixelMagic</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="Images/icon.ico" type="image/x-icon">
+</head>
+<body>
+	<div class="background"></div>
+	<div class="scroll-container">
+		<div class="container">
+			<header>
+				<h1>PixelMagic</h1>
+				<p class="info-text">PixelMagic cares about privacy.<br>Absolutely no information is saved or sent to a server.<br><br>Upload an image to begin!</p>
+			</header>
+			<main>
+				<div class="upload-section">
+					<label for="upload" class="custom-file-upload">
+						<input type="file" id="upload" accept="image/*">
+						Upload Image
+					</label>
+				</div>
+				<div class="controls" id="controls">
+					<label for="pixelSize">Pixel Size: </label>
+					<div class="pixel-size-control">
+						<button class="arrow-button" onclick="changePixelSize(-1)">←</button>
+						<span id="pixelSizeDisplay">5</span>
+						<button class="arrow-button" onclick="changePixelSize(1)">→</button>
+					</div>
+				</div>
+				<canvas id="canvas"></canvas>
+				<p class="donations-text">PixelMagic is run solely on donations. If you enjoy this free service, please consider donating!</p>
+				<div id="kofi-button-container" style="display: none;">
+					<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+					<script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#29abe0', 'X8X4Q0BAT');kofiwidget2.draw();</script>
+				</div>
+				<div class="download-section" id="download-section" style="display: none;">
+					<p class="download-heading">Download options</p>
+					<div class="download-buttons">
+						<button class="download-button" onclick="downloadImage('800x600')">800x600</button>
+						<button class="download-button" onclick="downloadImage('1024x768')">1024x768</button>
+						<button class="download-button" onclick="downloadImage('1280x720')">1280x720</button>
+						<button class="download-button" onclick="downloadImage('1920x1080')">1920x1080</button>
+					</div>
+					<button class="download-button original-size-button" onclick="downloadImage('original')">Original Size</button>
+				</div>
+			</main>
+			<footer>
+			</footer>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
